@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+input {
+  width: 200px;
+  padding: 10px;
+}
+
+.container-btn {
+  width: 230px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn-pesquisar,
+.btn-voltar {
+  width: 100px;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Acme", sans-serif;
+  background-color: rgb(60, 60, 63);
+  color: whitesmoke;
+  box-shadow: 1px 1px 2px whitesmoke;
+}
+
+.btn-pesquisar:hover,
+.btn-voltar:hover {
+  cursor: pointer;
+}
+
+.btn-pesquisar:active,
+.btn-voltar:active {
+  padding: 9px;
+  font-size: 15.5px;
+  background-color: rgb(71, 71, 71);
+}
+
+@media only screen and (min-width: 800px) {
+  .container-input {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-btn {
+    width: 215px;
+    margin-top: 0px;
+  }
+}
