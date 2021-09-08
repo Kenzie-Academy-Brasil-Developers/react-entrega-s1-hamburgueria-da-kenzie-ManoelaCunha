@@ -1,9 +1,9 @@
-const CurrentSale = ({ currentSale }) => {
+const CurrentSale = ({ currentSale: { name, category, price } }) => {
   return (
     <ul>
-      <li>{currentSale.name}</li>
-      <li>{currentSale.category}</li>
-      <li>R$ {currentSale.price}</li>
+      <li>{name}</li>
+      <li>{category}</li>
+      <li>R$ {price}</li>
     </ul>
   );
 };

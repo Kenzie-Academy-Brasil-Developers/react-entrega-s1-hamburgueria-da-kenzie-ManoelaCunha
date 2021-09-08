@@ -1,16 +1,13 @@
 import "./styles.css";
 
-const Product = ({ product, handleClick }) => {
+const Product = ({ product: { id, name, category, price }, handleClick }) => {
   return (
     <>
       <ul>
-        <li>{product.name}</li>
-        <li>{product.category}</li>
-        <li>R$ {product.price}</li>
-        <button
-          className="btn-add"
-          onClick={() => handleClick(product.id, product.price)}
-        >
+        <li>{name}</li>
+        <li>{category}</li>
+        <li>R$ {price}</li>
+        <button className="btn-add" onClick={() => handleClick(id, price)}>
           Adicionar
         </button>
       </ul>

@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.container-title {
+.title-carrinho {
   display: flex;
   width: 298px;
   color: whitesmoke;
@@ -82,7 +82,7 @@
     justify-content: space-around;
   }
 
-  .container-title {
+  .title-carrinho {
     width: 900px;
   }
 

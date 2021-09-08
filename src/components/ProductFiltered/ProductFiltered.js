@@ -1,13 +1,13 @@
-const ProductFiltered = ({ filteredProducts, handleClick }) => {
+const ProductFiltered = ({
+  filteredProduct: { id, name, category, price },
+  handleClick,
+}) => {
   return (
     <ul>
-      <li>{filteredProducts.name}</li>
-      <li>{filteredProducts.category}</li>
-      <li>R$ {filteredProducts.price}</li>
-      <button
-        className="btn-add"
-        onClick={() => handleClick(filteredProducts.id, filteredProducts.price)}
-      >
+      <li>{name}</li>
+      <li>{category}</li>
+      <li>R$ {price}</li>
+      <button className="btn-add" onClick={() => handleClick(id, price)}>
         Adicionar
       </button>
     </ul>

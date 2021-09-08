@@ -18,16 +18,20 @@ const MenuContainer = ({
     <>
       <div className="container-vitrine">
         {!control
-          ? products.map((item, index) => {
+          ? products.map((item) => {
               return (
-                <Product key={index} product={item} handleClick={handleClick} />
+                <Product
+                  key={item.id}
+                  product={item}
+                  handleClick={handleClick}
+                />
               );
             })
-          : filteredProducts.map((item, index) => {
+          : filteredProducts.map((item) => {
               return (
                 <ProductFiltered
-                  key={index}
-                  filteredProducts={item}
+                  key={item.id}
+                  filteredProduct={item}
                   handleClick={handleClick}
                 />
               );
@@ -50,14 +54,14 @@ const MenuContainer = ({
         </button>
       </div>
 
-      <div className="container-title">
+      <div className="title-carrinho">
         <h3>CARRINHO</h3>
         <img src={icon} width="32" height="32" alt="carrinho de compras" />
       </div>
 
       <div className="container-carrinho">
-        {currentSale.map((item, index) => {
-          return <CurrentSale key={index} currentSale={item} />;
+        {currentSale.map((item) => {
+          return <CurrentSale key={item.id} currentSale={item} />;
         })}
       </div>
     </>
